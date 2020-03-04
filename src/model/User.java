@@ -3,12 +3,16 @@ package model;
 import java.time.LocalDateTime;
 
 //Type your code
+
+//class user declaration
 public class User
 {
 	String name;
 	String password;
 	LocalDateTime date;
 	String email;
+	
+	//method
    public User(String name, String password, LocalDateTime date)
    {
 	   this.name=name;
@@ -16,6 +20,8 @@ public class User
 	   this.date=date;
 	   
    }
+   
+   //setter
    public void setEmail(String email)
    {
 	   this.email=email;
@@ -29,6 +35,8 @@ public class User
      this.date=date2;
    	
    }
+   
+   //getter
       
 public char[] getEmail() 
 { char c[]=email.toCharArray();
