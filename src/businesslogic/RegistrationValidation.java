@@ -29,7 +29,9 @@ public  class RegistrationValidation
          int lower=0;
          int num=0;
          
-         //password contains upeercase,lower and num
+         
+         
+         //password contains uppercase,lower and num
          
          for(int i=0;i<password.length();i++)
          {
@@ -50,6 +52,7 @@ public  class RegistrationValidation
 		
 		
 	}
+	
 	
 	//email content check
 	private boolean validEmail(String email)

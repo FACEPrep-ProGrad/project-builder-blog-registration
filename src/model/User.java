@@ -12,16 +12,27 @@ public class User
 	LocalDateTime date;
 	String email;
 	
-	//method
-   public User(String name, String password, LocalDateTime date)
-   {
-	   this.name=name;
-	   this.password=password;
-	   this.date=date;
-	   
-   }
+	
    
-   //setter
+   // gettersetter
+	
+	
+	public char[] getEmail() 
+	{ char c[]=email.toCharArray();
+		
+		return c;
+	}
+	public char[] getPassword() {
+		char c[]=password.toCharArray();
+		return c;
+	}
+	
+	public char[] getDate() {
+		char c[]=password.toCharArray();
+		return c;
+	}
+	
+	
    public void setEmail(String email)
    {
 	   this.email=email;
@@ -36,18 +47,14 @@ public class User
    	
    }
    
-   //getter
-      
-public char[] getEmail() 
-{ char c[]=email.toCharArray();
-	
-	return c;
+  
+//constructor
+public User(String name, String password, LocalDateTime date)
+{
+	   this.name=name;
+	   this.password=password;
+	   this.date=date;
+	   
 }
-public char[] getPassword() {
-	char c[]=password.toCharArray();
-	return c;
-}
-
-   
    
 }
