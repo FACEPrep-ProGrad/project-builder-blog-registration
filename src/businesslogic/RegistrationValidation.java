@@ -7,19 +7,17 @@ public class RegistrationValidation{
 	private boolean validPassword(String password, String confirmPassword) {
 		String passwordPattern="((?=.*[a-z])(?=.*\\d)(?=.*[A-Z])(?=.*[@#$%!]).{8,20})";
 		Pattern pass=Pattern.compile(passwordPattern);
-		if(password==null)
-			return false;
-		if(password==confirmPassword)
+		if(password!=null && password==confirmPassword && pass.matcher(password).matches())
 			return true;
-		return pass.matcher(password).matches();
+		return false;
 	}
 	
 	private boolean validEmail(String email) {
 		String emailContainer="^[a-zA-Z0-9_.]"+"@"+"[a-zA-Z0-9.]";
 		Pattern ePat=Pattern.compile(emailContainer);
-		if(email==null)
-			return false;
-		return ePat.matcher(email).matches();
+		if(email!=null && ePat.matcher(email).matches())
+			return true;
+		return false;
 	}
 	
 	public boolean checkUserDetails(String email, String password, String confirmPassword) {
