@@ -9,17 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+import businesslogic.ValidateUser;
+import model.User;
 
 
 @WebServlet(urlPatterns= {"/login"})
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
     public LoginController() {
         super();
-        // TODO Auto-generated constructor stub
+      
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,8 +29,8 @@ public class LoginController extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/*	String email = request.getParameter("email"); //  get the email value from the jsp/html page
-		String password = request.getParameter("password"); //  get the password value from the jsp/html page
+		String email = request.getParameter("email"); 
+		String password = request.getParameter("password"); 
 
 		ValidateUser validateUser = new ValidateUser();
 		if(validateUser.validate(email,password)) {
@@ -44,7 +44,7 @@ public class LoginController extends HttpServlet {
 		
 		
 		
-	*/	
+		
 	}
 
 }
