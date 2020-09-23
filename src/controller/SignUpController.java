@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import businesslogic.RegistrationValidation;
+import model.User;
+
 
 
 @WebServlet(urlPatterns= {"/signup"})
@@ -31,13 +34,15 @@ public class SignUpController extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	/*	String email = request.getParameter("email"); 
+		String email = request.getParameter("email"); 
 		String password = request.getParameter("password"); 
 		String confirmPassword = request.getParameter("confirmPassword"); 
 		LocalDateTime date= LocalDateTime.now(); 
 		
+		RegistrationValidation checkUser = new RegistrationValidation(); 
 
-		
+		boolean valid = checkUser.checkUserDetails(email, password, confirmPassword);
+		System.out.println(valid);
 		if(checkUser.checkUserDetails(email, password, confirmPassword))
 		{
 			User user=new User(email,password,date);
@@ -48,7 +53,7 @@ public class SignUpController extends HttpServlet {
 			System.out.println(user.getPassword());
 			System.out.println(user.getDate());
 			request.setAttribute("message", "Registration Successful");
-			RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/signupView.jsp");
+			RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/blogView.jsp");
 			rd.forward(request, response);
 		}
 		else
@@ -58,7 +63,7 @@ public class SignUpController extends HttpServlet {
 			rd.forward(request, response);
 		}
 		
-		*/
+		
 	}
 
 }
