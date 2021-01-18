@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import businesslogic.RegistrationValidation;
+
+import java.util.*;
 
 
 @WebServlet(urlPatterns= {"/signup"})
@@ -21,6 +24,11 @@ public class SignUpController extends HttpServlet {
     public SignUpController() {
         super();
        
+    }
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
+    	RegistrationValidation validation1 = new RegistrationValidation();
+    	System.out.println(validation1.checkUserDetails(sc.next(),sc.next(),sc.next()));
     }
 
 
