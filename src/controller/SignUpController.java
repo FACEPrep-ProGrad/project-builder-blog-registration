@@ -28,7 +28,11 @@ public class SignUpController extends HttpServlet {
     public static void main(String[] args) {
     	Scanner sc = new Scanner(System.in);
     	RegistrationValidation validation1 = new RegistrationValidation();
-    	System.out.println(validation1.checkUserDetails(sc.next(),sc.next(),sc.next()));
+    	if(validation1.checkUserDetails(sc.next(),sc.next(),sc.next())){
+		System.out.print("Registered Successful");
+	}else{
+		System.out.print("Wrong Credentials");
+	}
     }
 
 
