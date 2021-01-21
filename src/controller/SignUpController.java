@@ -31,7 +31,7 @@ public class SignUpController extends HttpServlet {
     	if(validation1.checkUserDetails(sc.next(),sc.next(),sc.next())){
 		System.out.print("Registered Successful");
 	}else{
-		System.out.print("Wrong Credentials");
+		System.out.print("Please try again");
 	}
     }
 
