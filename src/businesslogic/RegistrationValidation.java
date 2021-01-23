@@ -13,7 +13,7 @@ public class RegistrationValidation{
 			String confirmPassword)
 	{
 		//check if password is empty
-		if(password==null)
+		if(password==null||confirmPassword==null)
 			return false;
 		
 		//check if not password matches confirm password 

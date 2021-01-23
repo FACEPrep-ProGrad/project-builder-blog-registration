@@ -2,7 +2,7 @@ let addBlog=document.getElementById("addBlog");
 
 console.log(addBlog);
 
-addBlog.onclick = () =>{
+addBlog.onclick =function add(){
 	console.log("onclick");
 	document.getElementById('popup').style.display = "block";
 } 

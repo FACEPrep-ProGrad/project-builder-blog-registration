@@ -36,11 +36,11 @@
 
 <input id="title" name="title" placeholder="Title" type="text">
 <textarea id="msg" name="message" placeholder="Description"></textarea>
-<p id="subject">Subject</p>
+<!-- <p id="subject">Subject</p>
 <input id="html" type="radio" name="subject"/>
 <input id="css" type="radio" name="subject" />
 <input id="java" type="radio" name="subject"/>
-<input id="js" type="radio" name="subject"/>
+<input id="js" type="radio" name="subject"/> -->
 <button id="post" type="submit" >POST</button>
 </form>
 </div>
